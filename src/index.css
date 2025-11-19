@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-yuki-pink: rgb(255, 54, 125);
+  --color-yuki-cyan: rgb(54, 176, 254);
+  --color-yuki-dark-pink: rgb(79, 22, 42);
+}
+
+html {
+  @apply min-h-screen bg-cover bg-center bg-fixed;
+  background-image: url("/background.png");
+}
