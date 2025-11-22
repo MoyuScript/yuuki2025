@@ -4,10 +4,7 @@ export const LINK_VIDEO_PV0 = "https://www.bilibili.com/video/BV1cZsbzeEyv/"
  * TODO: 填写 PV1 视频地址
  */
 export const LINK_VIDEO_PV1 = ""
-/**
- * TODO: 填写纪念礼盒购买地址
- */
-export const LINK_GIFT_LINK = ""
+export const LINK_GIFT_LINK = "https://m.tb.cn/h.SE6KoDF?tk=r5ebfOHO56I"
 /**
  * TODO: 填写 B 站动态地址
  */
