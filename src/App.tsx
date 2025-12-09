@@ -14,6 +14,7 @@ import {
   LINK_VIDEO_PV1,
   LINK_VIDEO_PV2,
 } from "./links";
+import Lottery from "./Lottery";
 
 function NewsEvent({
   title,
@@ -59,6 +60,9 @@ function NewsEvent({
 }
 
 function App() {
+  if (window.location.search.includes("lottery")) {
+    return <Lottery />;
+  }
   return (
     <>
       <main>
@@ -143,7 +147,9 @@ function App() {
             <div className="mt-4 flex flex-col gap-8">
               <NewsEvent
                 title="2025-12-06"
-                description={<p>八音盒温柔演奏《ゆきよりも優しく》曲目预览。</p>}
+                description={
+                  <p>八音盒温柔演奏《ゆきよりも優しく》曲目预览。</p>
+                }
                 video={{
                   url: LINK_VIDEO_PV2,
                   src: "/预告视频2封面.png",
