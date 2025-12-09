@@ -12,6 +12,7 @@ import {
   LINK_SUBSCRIBE_LIVE,
   LINK_VIDEO_PV0,
   LINK_VIDEO_PV1,
+  LINK_VIDEO_PV2,
 } from "./links";
 
 function NewsEvent({
@@ -140,6 +141,15 @@ function App() {
               重要事件
             </h1>
             <div className="mt-4 flex flex-col gap-8">
+              <NewsEvent
+                title="2025-12-06"
+                description={<p>八音盒温柔演奏《ゆきよりも優しく》曲目预览。</p>}
+                video={{
+                  url: LINK_VIDEO_PV2,
+                  src: "/预告视频2封面.png",
+                  alt: "预告视频2封面",
+                }}
+              />
               <NewsEvent
                 title="2025-11-22"
                 description={
