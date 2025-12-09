@@ -160,7 +160,9 @@ const Lottery = () => {
             </div>
 
             {/* Name */}
-            <div
+            <a
+              href={`https://space.bilibili.com/${currentUser.uid}`}
+              target="_blank"
               className={`text-6xl font-bold tracking-tight ${
                 hasWon
                   ? "text-yuki-pink"
@@ -168,7 +170,7 @@ const Lottery = () => {
               }`}
             >
               {displayName}
-            </div>
+            </a>
 
             {/* Text Info */}
             <div
