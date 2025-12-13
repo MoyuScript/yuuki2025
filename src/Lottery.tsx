@@ -2,7 +2,7 @@ import confetti from "canvas-confetti";
 import { Loader2, Play, Sparkles, Square } from "lucide-react";
 import { motion } from "motion/react";
 import { useRef, useState } from "react";
-import BLESS_DATA from './bless.json'
+import BLESS_DATA from "./bless.json";
 
 const Lottery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
