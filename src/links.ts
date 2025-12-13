@@ -2,6 +2,7 @@ export const LINK_SUBSCRIBE_LIVE = "https://www.bilibili.com/opus/11379402335343
 export const LINK_VIDEO_PV0 = "https://www.bilibili.com/video/BV1cZsbzeEyv/"
 export const LINK_VIDEO_PV1 = "https://www.bilibili.com/video/BV1HMUnBEEtM/"
 export const LINK_VIDEO_PV2 = "https://www.bilibili.com/video/BV1Fp25BoEZC/"
+export const LINK_VIDEO_PV3 = "https://www.bilibili.com/video/BV1KEmsBPE9y/"
 export const LINK_GIFT_LINK = "https://m.tb.cn/h.SE6KoDF?tk=r5ebfOHO56I"
 export const LINK_BLESS = "https://www.bilibili.com/opus/1137940233534308353"
 export const LINK_BILIBILI_ACCOUNT = "https://space.bilibili.com/660303135"

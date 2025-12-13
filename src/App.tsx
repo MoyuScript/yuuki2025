@@ -13,6 +13,7 @@ import {
   LINK_VIDEO_PV0,
   LINK_VIDEO_PV1,
   LINK_VIDEO_PV2,
+  LINK_VIDEO_PV3,
 } from "./links";
 import Lottery from "./Lottery";
 
@@ -145,6 +146,17 @@ function App() {
               重要事件
             </h1>
             <div className="mt-4 flex flex-col gap-8">
+              <NewsEvent
+                title="2025-12-02"
+                description={
+                  <p>超燃人声合唱交响改编《Runic unlimited》曲目预览。</p>
+                }
+                video={{
+                  url: LINK_VIDEO_PV3,
+                  src: "/预告视频3封面.jpg",
+                  alt: "预告视频3封面",
+                }}
+              />
               <NewsEvent
                 title="2025-12-06"
                 description={
