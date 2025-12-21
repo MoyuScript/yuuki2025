@@ -1,9 +1,15 @@
 @import "tailwindcss";
 
-@theme {
-  --color-yuki-pink: rgb(255, 54, 125);
-  --color-yuki-cyan: rgb(54, 176, 254);
-  --color-yuki-dark-pink: rgb(79, 22, 42);
+:root {
+  --yuki-pink: rgb(255, 54, 125);
+  --yuki-cyan: rgb(54, 176, 254);
+  --yuki-dark-pink: rgb(79, 22, 42);
+}
+
+@theme inline {
+  --color-yuki-pink: var(--yuki-pink);
+  --color-yuki-cyan: var(--yuki-cyan);
+  --color-yuki-dark-pink: var(--yuki-dark-pink);
 }
 
 html {

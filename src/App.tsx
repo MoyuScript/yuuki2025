@@ -16,6 +16,7 @@ import {
   LINK_VIDEO_PV3,
 } from "./links";
 import Lottery from "./Lottery";
+import blessData from "./bless.json";
 
 function NewsEvent({
   title,
@@ -57,6 +58,44 @@ function NewsEvent({
         )}
       </div>
     </div>
+  );
+}
+
+function BlessWall() {
+  return (
+    <section id="bless-wall" className="min-h-[50vh] bg-white/90 py-8 px-4">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="font-bold text-center text-yuki-pink text-lg lg:text-2xl mb-8">
+          祝福墙
+        </h1>
+        <div className="space-y-4 max-h-[60vh] overflow-y-auto">
+          {blessData.map((item) => (
+            <div
+              key={item.uid}
+              className="bg-white p-4 rounded-xl shadow-sm border border-yuki-pink/20 flex gap-4"
+            >
+              <img
+                src={`/avatars/${item.uid}_${item.name}.png`}
+                alt={item.name}
+                className="w-12 h-12 rounded-full flex-shrink-0 object-cover"
+              />
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between mb-1">
+                  <span
+                    className={`font-bold text-yuki-pink truncate`}
+                  >
+                    {item.name}
+                  </span>
+                </div>
+                <p className="text-gray-700 text-sm whitespace-pre-wrap break-words">
+                  {item.content}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -126,6 +165,12 @@ function App() {
                 href="#bless"
               >
                 送祝福语
+              </a>
+              <a
+                className="border-2 rounded-md border-yuki-pink text-yuki-pink py-2"
+                href="#bless-wall"
+              >
+                祝福墙
               </a>
               <a
                 className="border-2 rounded-md border-yuki-cyan text-yuki-cyan py-2"
@@ -308,13 +353,11 @@ function App() {
                 <strong className="text-yuki-cyan">免费获得一份纪念礼盒</strong>
               </p>
               <p className="my-8 lg:my-12">
-                <a
-                  href={LINK_BLESS}
-                  target="_blank"
-                  className="inline-block text-white font-bold bg-yuki-pink text-xl px-8 py-2 rounded-full lg:text-2xl lg:px-10 lg:py-3"
+                <span
+                  className="inline-block text-white font-bold bg-[oklch(from_var(--yuki-pink)_calc(l)_calc(c-0.05)_h)] text-xl px-8 py-2 rounded-full lg:text-2xl lg:px-10 lg:py-3 cursor-not-allowed"
                 >
-                  前往参与
-                </a>
+                  活动已结束
+                </span>
               </p>
             </div>
             <div className="bg-white/80 text-black p-4 rounded-xl">
@@ -426,6 +469,7 @@ function App() {
             </div>
           </div>
         </section>
+        <BlessWall />
       </main>
       <footer className="py-8 px-4 bg-yuki-pink/95 text-white text-center space-y-2">
         <p>版权所有：2025 年雪雪生日音乐会</p>

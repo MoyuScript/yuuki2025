@@ -27,10 +27,6 @@ if (fs.existsSync(outputJsonPath)) {
 for (const reply of input.data.replies) {
   const filteredMessage = reply.content.message.replace(/\[.+?\]/g, "");
   console.log(`${reply.member.uname}: ${filteredMessage}`);
-  if (!reply.up_action.like) {
-    console.log("------ 未赞跳过");
-    continue;
-  }
   const avatarBuffer = await got(
     `${reply.member.avatar}@256w_256h.png`
   ).buffer();
@@ -38,6 +34,7 @@ for (const reply of input.data.replies) {
     uid: reply.member.mid,
     name: reply.member.uname,
     content: filteredMessage,
+    url: `https://space.bilibili.com/${reply.member.mid}`,
     avatar: `data:image/png;base64,${avatarBuffer.toString("base64")}`,
   });
   fs.writeFileSync(

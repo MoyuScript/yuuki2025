@@ -148,7 +148,7 @@ const Lottery = () => {
             <div className={`relative rounded-full`}>
               <div className="w-32 h-32 rounded-full overflow-hidden bg-slate-200 border-4 border-yuki-pink relative">
                 <img
-                  src={currentUser.avatar}
+                  src={`/avatars/${currentUser.uid}_${currentUser.name}.png`}
                   alt="Avatar"
                   className="w-full h-full object-cover"
                 />
@@ -161,7 +161,7 @@ const Lottery = () => {
 
             {/* Name */}
             <a
-              href={`https://space.bilibili.com/${currentUser.uid}`}
+              href={currentUser.url}
               target="_blank"
               className={`text-6xl font-bold tracking-tight ${
                 hasWon
