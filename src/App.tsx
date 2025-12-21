@@ -14,6 +14,7 @@ import {
   LINK_VIDEO_PV1,
   LINK_VIDEO_PV2,
   LINK_VIDEO_PV3,
+  LINK_VIDEO_PV4,
 } from "./links";
 import Lottery from "./Lottery";
 import blessData from "./bless.json";
@@ -191,6 +192,17 @@ function App() {
               重要事件
             </h1>
             <div className="mt-4 flex flex-col gap-8">
+              <NewsEvent
+                title="2025-12-20"
+                description={
+                  <p>直播安排、节目单公布</p>
+                }
+                video={{
+                  url: LINK_VIDEO_PV4,
+                  src: "/预告视频4封面.jpg",
+                  alt: "预告视频4封面",
+                }}
+              />
               <NewsEvent
                 title="2025-12-02"
                 description={
