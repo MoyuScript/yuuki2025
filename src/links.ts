@@ -1,4 +1,4 @@
-export const LINK_SUBSCRIBE_LIVE = "https://www.bilibili.com/opus/1137940233534308353"
+export const LINK_VIDEO_FULL = "https://www.bilibili.com/video/BV12tBjBQE2n/"
 export const LINK_VIDEO_PV0 = "https://www.bilibili.com/video/BV1cZsbzeEyv/"
 export const LINK_VIDEO_PV1 = "https://www.bilibili.com/video/BV1HMUnBEEtM/"
 export const LINK_VIDEO_PV2 = "https://www.bilibili.com/video/BV1Fp25BoEZC/"

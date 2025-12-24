@@ -9,7 +9,7 @@ import {
   LINK_BILIBILI_ACCOUNT,
   LINK_BLESS,
   LINK_GIFT_LINK,
-  LINK_SUBSCRIBE_LIVE,
+  LINK_VIDEO_FULL,
   LINK_VIDEO_PV0,
   LINK_VIDEO_PV1,
   LINK_VIDEO_PV2,
@@ -129,11 +129,11 @@ function App() {
           </div>
           <div className="mt-6 lg:mt-14">
             <a
-              href={LINK_SUBSCRIBE_LIVE}
+              href={LINK_VIDEO_FULL}
               target="_blank"
               className="inline-block text-white font-bold bg-yuki-pink text-xl px-8 py-2 rounded-full lg:text-2xl lg:px-16 lg:py-3"
             >
-              预约直播
+              查看录播
             </a>
           </div>
           <a
@@ -192,6 +192,17 @@ function App() {
               重要事件
             </h1>
             <div className="mt-4 flex flex-col gap-8">
+              <NewsEvent
+                title="2025-12-24"
+                description={
+                  <p>完整节目视频发布。</p>
+                }
+                video={{
+                  url: LINK_VIDEO_FULL,
+                  src: "/节目视频封面.png",
+                  alt: "节目视频封面",
+                }}
+              />
               <NewsEvent
                 title="2025-12-20"
                 description={
